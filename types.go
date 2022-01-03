@@ -123,7 +123,7 @@ func toInt(in interface{}) (int64, error) {
 			return 0, nil
 		}
 		out := strings.SplitN(s, ".", 2)
-		return strconv.ParseInt(out[0], 0, 64)
+		return strconv.ParseInt(out[0], 10, 64)
 	case reflect.Bool:
 		if inValue.Bool() {
 			return 1, nil
